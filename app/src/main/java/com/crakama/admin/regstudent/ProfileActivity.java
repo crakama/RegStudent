@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
 
 public class ProfileActivity extends AppCompatActivity {
 
@@ -11,6 +13,7 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+        Button btnSelectContact = (Button)findViewById(R.id.buttonback);
     }
 
     @Override
@@ -18,7 +21,7 @@ public class ProfileActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;}
 
-    public void selectContact(){
+    public void selectContact(View v){
 
         Intent contactIntent = new Intent(Intent.ACTION_DIAL);
         startActivity(contactIntent);
