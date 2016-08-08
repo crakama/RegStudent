@@ -14,6 +14,13 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
         Button btnSelectContact = (Button)findViewById(R.id.buttonback);
+        btnSelectContact.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v){
+                selectContact(v);
+            }
+        });
     }
 
     @Override
