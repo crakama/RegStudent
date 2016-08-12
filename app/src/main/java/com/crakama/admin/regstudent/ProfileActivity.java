@@ -42,8 +42,11 @@ public class ProfileActivity extends AppCompatActivity {
 
     public void selectContact(View v){
 
-        Intent contactIntent = new Intent(Intent.ACTION_DIAL);
-        startActivity(contactIntent);
+//        Intent contactIntent = new Intent(Intent.ACTION_DIAL);
+//        startActivity(contactIntent);
+
+        Intent SpinnerIntent = new Intent(ProfileActivity.this,SpinnerActivity.class);
+        startActivity(SpinnerIntent);
     }
 
     public void viewMap(View v){
