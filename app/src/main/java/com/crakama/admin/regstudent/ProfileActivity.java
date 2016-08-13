@@ -33,6 +33,18 @@ public class ProfileActivity extends AppCompatActivity {
                 viewMap(v);
             }
         });
+
+
+        Button btnSelectCourse = (Button)findViewById(R.id.buttonCourse);
+        btnSelectCourse.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v){
+                Intent selectcourseIntent = new Intent(ProfileActivity.this, SelectCourseActivity.class);
+                startActivity(selectcourseIntent);
+            }
+        });
+
     }
 
     @Override
@@ -42,11 +54,10 @@ public class ProfileActivity extends AppCompatActivity {
 
     public void selectContact(View v){
 
-//        Intent contactIntent = new Intent(Intent.ACTION_DIAL);
-//        startActivity(contactIntent);
+        Intent contactIntent = new Intent(Intent.ACTION_DIAL);
+        startActivity(contactIntent);
 
-        Intent SpinnerIntent = new Intent(ProfileActivity.this,SpinnerActivity.class);
-        startActivity(SpinnerIntent);
+
     }
 
     public void viewMap(View v){

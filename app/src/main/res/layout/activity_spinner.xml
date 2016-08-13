@@ -19,10 +19,11 @@
         android:layout_height="wrap_content"
         android:textSize="24sp"></Spinner>
 
-    <Spinner
+    <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/spinner2"
+        android:id="@+id/lvcourse"
         android:layout_gravity="center_horizontal" />
+
 
 </LinearLayout>

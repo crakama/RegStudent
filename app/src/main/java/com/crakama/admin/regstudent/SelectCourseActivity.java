@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -15,6 +16,7 @@ public class SelectCourseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_course_option);
 
+        // Code for Spinner viewgroup
         Spinner spinner = (Spinner)findViewById(R.id.spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.colors, R.layout.dropdownspin);
 
@@ -32,6 +34,10 @@ public class SelectCourseActivity extends AppCompatActivity {
 
             }
         });
+
+        // Code for listView viewgroup
+        ListView lv = (ListView)findViewById(R.id.lvcourse);
+//        ArrayAdapter<CharSequence> listAdapter = ArrayAdapter.createFromResource(this, R.array.colors, R.color.drop)
     }
 
 
