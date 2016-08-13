@@ -1,5 +1,6 @@
 package com.crakama.admin.regstudent;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
@@ -8,7 +9,7 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 
-public class ProfileActivity extends AppCompatActivity {
+public class ProfileActivity extends Activity {
     Double myLatitude = 44.433106;
     Double myLongitude = 26.103687;
     String labelLocation = "Jorgesys @ Bucharest";
@@ -35,15 +36,14 @@ public class ProfileActivity extends AppCompatActivity {
         });
 
 
-        Button btnSelectCourse = (Button)findViewById(R.id.buttonCourse);
-        btnSelectCourse.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v){
-                Intent selectcourseIntent = new Intent(ProfileActivity.this, SelectCourseActivity.class);
-                startActivity(selectcourseIntent);
-            }
-        });
+//        Button btnSelectCourse = (Button)findViewById(R.id.buttonCourse);
+//        btnSelectCourse.setOnClickListener(new View.OnClickListener(){
+//
+//            @Override
+//            public void onClick(View v){
+//                selectCourse( v);
+//            }
+//        });
 
     }
 
@@ -59,6 +59,16 @@ public class ProfileActivity extends AppCompatActivity {
 
 
     }
+
+
+//    public void selectCourse(View view){
+//
+//        Intent selectcourseIntent = new Intent(getApplicationContext(), SelectCourseActivity.class);
+//        startActivity(selectcourseIntent);
+//
+//
+//    }
+
 
     public void viewMap(View v){
         String urlAddress = "http://maps.google.com/maps?q="+ myLatitude  +"," + myLongitude +"("+ labelLocation + ")&iwloc=A&hl=es";

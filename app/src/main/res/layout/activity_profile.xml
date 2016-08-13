@@ -74,7 +74,7 @@
             android:layout_height="wrap_content"
             android:text="SELECT COURSE"
             android:id="@+id/buttonCourse"
-            android:onClick="selectCourse"
+          android:onClick="selectCourse"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true" />
 
