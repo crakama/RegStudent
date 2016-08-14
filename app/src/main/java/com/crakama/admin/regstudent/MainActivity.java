@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,26 +35,10 @@ public class MainActivity extends Activity {
             }
         });
 
-        /////
-
-        Button btnSelectCourse = (Button)findViewById(R.id.buttonCourse);
-       btnSelectCourse.setOnClickListener(new View.OnClickListener(){
-           @Override
-           public void onClick(View viewcourse){
-               selectCourse( viewcourse);
-           }
-        });
-    }
-
-
-    ///
-    public void selectCourse(View viewcourse){
-
-        Intent selectcourseIntent = new Intent(getApplicationContext(), SelectCourseActivity.class);
-        startActivity(selectcourseIntent);
-
 
     }
+
+
 
     public void registerStudent(View view){
 

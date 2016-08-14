@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:padding="10dip"
     android:orientation="vertical"
-    tools:context="com.crakama.admin.regstudent.SpinnerActivity">
+    tools:context="com.crakama.admin.regstudent.SelectCourseActivity">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

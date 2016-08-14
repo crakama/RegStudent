@@ -25,7 +25,6 @@
             android:configChanges="orientation|screenSize|keyboardHidden" />
         <activity android:name=".SelectCourseActivity" />
         <activity android:name=".SecondActivity" />
-        <activity android:name=".SpinnerActivity" />
 
     </application>
 

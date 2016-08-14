@@ -9,7 +9,7 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 
-public class ProfileActivity extends Activity {
+public class ProfileActivity extends AppCompatActivity {
     Double myLatitude = 44.433106;
     Double myLongitude = 26.103687;
     String labelLocation = "Jorgesys @ Bucharest";
@@ -36,14 +36,15 @@ public class ProfileActivity extends Activity {
         });
 
 
-//        Button btnSelectCourse = (Button)findViewById(R.id.buttonCourse);
-//        btnSelectCourse.setOnClickListener(new View.OnClickListener(){
-//
-//            @Override
-//            public void onClick(View v){
-//                selectCourse( v);
-//            }
-//        });
+        /////
+
+        Button btnSelectCourse = (Button)findViewById(R.id.buttonCourse);
+        btnSelectCourse.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View viewcourse){
+                selectCourse( viewcourse);
+            }
+        });
 
     }
 
@@ -61,14 +62,14 @@ public class ProfileActivity extends Activity {
     }
 
 
-//    public void selectCourse(View view){
-//
-//        Intent selectcourseIntent = new Intent(getApplicationContext(), SelectCourseActivity.class);
-//        startActivity(selectcourseIntent);
-//
-//
-//    }
+    ///
+    public void selectCourse(View viewcourse){
 
+        Intent selectcourseIntent = new Intent(getApplicationContext(), SelectCourseActivity.class);
+        startActivity(selectcourseIntent);
+
+
+    }
 
     public void viewMap(View v){
         String urlAddress = "http://maps.google.com/maps?q="+ myLatitude  +"," + myLongitude +"("+ labelLocation + ")&iwloc=A&hl=es";
