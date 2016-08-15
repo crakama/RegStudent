@@ -61,29 +61,7 @@ public class SelectCourseActivity extends AppCompatActivity {
 //            }
 //        });
 //
-        private void setupTabs() {
-            ActionBar actionBar = getSupportActionBar();
-            actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-            actionBar.setDisplayShowTitleEnabled(true);
 
-            TabLayout.Tab tab1 = actionBar
-                    .newTab()
-                    .setText("First")
-                    .setIcon(R.drawable.ic_home)
-                    .setTabListener(new SupportFragmentTabListener<FirstFragment>(R.id.flContainer, this,
-                            "first", FirstFragment.class));
-
-            actionBar.addTab(tab1);
-            actionBar.selectTab(tab1);
-
-            TabLayout.Tab tab2 = actionBar
-                    .newTab()
-                    .setText("Second")
-                    .setIcon(R.drawable.ic_mentions)
-                    .setTabListener(new SupportFragmentTabListener<SecondFragment>(R.id.flContainer, this,
-                            "second", SecondFragment.class));
-            actionBar.addTab(tab2);
-        }
 
 
 
