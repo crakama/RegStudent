@@ -65,7 +65,7 @@ public class ProfileActivity extends AppCompatActivity {
     ///
     public void selectCourse(View viewcourse){
 
-        Intent selectcourseIntent = new Intent(getApplicationContext(), SelectCourseActivity.class);
+        Intent selectcourseIntent = new Intent(getApplicationContext(), ViewCourseActivity.class);
         startActivity(selectcourseIntent);
 
 

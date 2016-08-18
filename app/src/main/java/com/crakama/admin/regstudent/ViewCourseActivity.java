@@ -2,7 +2,7 @@ package com.crakama.admin.regstudent;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import javax.swing.event.*;
+
 
 public class ViewCourseActivity extends AppCompatActivity implements CourseTitleFragment.CourseListListener{
 
@@ -17,7 +17,7 @@ public class ViewCourseActivity extends AppCompatActivity implements CourseTitle
 
     @Override
     public void itemClicked(long id) {
-//The code to set the detail will go here
+   //This method is defined in the listener.
     }
 
 
