@@ -8,6 +8,7 @@ import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 
@@ -77,6 +78,17 @@ public class CourseTitleFragment extends ListFragment {
          * Calling the superclass onCreateView() method gives you the default layout
          * for the ListFragment
          */
+        //Create a String array of the workout names
+        String[] names = new String[Course.courses.length];
+        for (int i = 0; i < names.length; i++) {
+            names[i] = Course.courses[i].getName();
+        }
+        /**
+         * simple_list_item_1 This is a built-in layout resource.
+         * It tells the array adapter to display each item in the array in a single text view
+         */
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(inflater.getContext(),android.R.layout.simple_list_item_1, names);
+        setListAdapter(adapter);
 
         return super.onCreateView(inflater, container, savedInstanceState);
 
