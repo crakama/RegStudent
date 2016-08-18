@@ -12,11 +12,11 @@ public class ViewCourseActivity extends AppCompatActivity implements ListSelecti
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mTitleArray = getResources().getStringArray(R.array);
-        mDetailsArray = getResources().getStringArray(R.array);
-        setContentView(R.layout.dropdownspin);
+        mTitleArray = getResources().getStringArray(R.array.Titles);
+        mDetailsArray = getResources().getStringArray(R.array.Details);
+        setContentView(R.layout.fragmentcontainer);
 
-        mcourseDetailsFragment = (CourseDetailsFragment) getFragmentManager().findFragmentById(R.id.)
+        mcourseDetailsFragment = (CourseDetailsFragment) getSupportFragmentManager().findFragmentById(R.id.titledetails);
     }
 
 
