@@ -87,17 +87,22 @@ public class CourseTitleFragment extends Fragment {
     @Override
     public void onStart(){
         super.onStart();
-
+        /**
+         * getView() method gets the fragment's root View.
+         * Use object of this method to get references to the workout title and description text views.
+         */
         View view = getView();
         if (view != null) {
             TextView title = (TextView) view.findViewById(R.id.textTitle);
-            Workout course = Workout.workouts[(int) courseid];
+            Course course = Course.courses[(int) courseid];
             title.setText(course.getName());
             TextView description = (TextView) view.findViewById(R.id.textDescription);
             description.setText(course.getDescription());
         }
 
     }
+
+
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
