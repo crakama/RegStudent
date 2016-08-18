@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 
 /**
@@ -23,7 +24,7 @@ public class CourseDetailsFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-
+    private long courseid;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -69,7 +70,34 @@ public class CourseDetailsFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_course_details, container, false);
     }
 
+    /**
+     * setter method sets the value of the course ID.
+     * The hosting activity calls this method and passes an ID of a particular course
+     */
+    public void setCourse(long id){
 
+        this.courseid = id;
+    }
+
+
+    /**
+     * getView() method gets the fragment's root View.
+     * Use object of this method to get references to the workout title and description text views.
+     */
+    @Override
+    public void onStart(){
+        super.onStart();
+
+        View view = getView();
+        if (view != null) {
+            TextView title = (TextView) view.findViewById(R.id.textTitle);
+            Course course = Course.courses[(int) courseid];
+            title.setText(course.getName());
+            TextView description = (TextView) view.findViewById(R.id.textDescription);
+            description.setText(course.getDescription());
+        }
+
+    }
 
 
 

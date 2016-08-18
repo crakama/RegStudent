@@ -4,6 +4,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +19,7 @@ import android.widget.TextView;
  * Use the {@link CourseTitleFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class CourseTitleFragment extends Fragment {
+public class CourseTitleFragment extends ListFragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -28,7 +29,7 @@ public class CourseTitleFragment extends Fragment {
      *  ID of the course the user chooses,
      *  Use it to set the values of fragment's views with the course details
      */
-    private long courseid;
+
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -70,37 +71,20 @@ public class CourseTitleFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_view_course, container, false);
-    }
-
-
-    /**
-     * setter method sets the value of the course ID.
-     * The hosting activity calls this method and passes an ID of a particular course
-     */
-    public void setCourse(long id){
-
-        this.courseid = id;
-    }
-
-    @Override
-    public void onStart(){
-        super.onStart();
         /**
-         * getView() method gets the fragment's root View.
-         * Use object of this method to get references to the workout title and description text views.
+         * Inflate the layout for this fragment
+         * return inflater.inflate(R.layout.fragment_view_course, container, false);
+         * Calling the superclass onCreateView() method gives you the default layout
+         * for the ListFragment
          */
-        View view = getView();
-        if (view != null) {
-            TextView title = (TextView) view.findViewById(R.id.textTitle);
-            Course course = Course.courses[(int) courseid];
-            title.setText(course.getName());
-            TextView description = (TextView) view.findViewById(R.id.textDescription);
-            description.setText(course.getDescription());
-        }
+
+        return super.onCreateView(inflater, container, savedInstanceState);
+
 
     }
+
+
+
 
 
     // TODO: Rename method, update argument and hook method into UI event

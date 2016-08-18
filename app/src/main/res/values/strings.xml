@@ -21,13 +21,9 @@
         <item>HTML</item>
     </string-array>
 
-    <string-array name="Details">
-        <item> Android is a mobile operating system developed by Google. It is used by several smartphones and tablets.
-            Examples include the Sony Xperia, the Samsung Galaxy, and the Google Nexus One</item>
-        <item></item>
 
 
-    </string-array>
+
     <string name="color_prompt">Pick a color. Any Color</string>
 
     <!-- TODO: Remove or change this placeholder text -->
