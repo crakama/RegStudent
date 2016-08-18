@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
     <fragment
-        android:id="@+id/titles"
+        android:id="@+id/coursetitles"
         android:layout_width="0px"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -13,7 +13,7 @@
         tools:layout="@layout/fragment_view_course" />
 
     <fragment
-        android:id="@+id/titledetails"
+        android:id="@+id/titledetailsfrag"
         android:layout_width="0px"
         android:layout_height="match_parent"
         android:layout_weight="2"
