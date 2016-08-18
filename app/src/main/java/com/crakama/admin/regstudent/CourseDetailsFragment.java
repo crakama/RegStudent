@@ -23,6 +23,10 @@ public class CourseDetailsFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    /**
+     *  ID of the course the user chooses,
+     *  Use it to set the values of fragment's views with the course details
+     */
 
     private long courseid;
 

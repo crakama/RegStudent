@@ -1,5 +1,6 @@
 package com.crakama.admin.regstudent;
 
+import android.app.Activity;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 
@@ -26,10 +28,14 @@ public class CourseTitleFragment extends ListFragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    /**
-     *  ID of the course the user chooses,
-     *  Use it to set the values of fragment's views with the course details
-     */
+    //Adding the listener to the fragment
+    static interface CourseListListener {
+        void itemClicked(long id);
+    };
+    private CourseListListener listener;
+
+
+
 
 
     // TODO: Rename and change types of parameters
@@ -107,7 +113,23 @@ public class CourseTitleFragment extends ListFragment {
     }
 
     @Override
-    public void onAttach(Context context) {
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        this.listener = (CourseListListener)activity;
+
+    }
+    @Override
+    public void onListItemClick(ListView lst, View vw, int pos, long id){
+
+        if (listener != null){
+            //Tell the listener when an item in the ListView is clicked.
+            listener.itemClicked(id);
+        }
+    }
+
+  //Called when fragment get attached to the activity
+    /**   @Override
+   public void onAttach(Context context) {
         super.onAttach(context);
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
@@ -116,7 +138,7 @@ public class CourseTitleFragment extends ListFragment {
                     + " must implement OnFragmentInteractionListener");
         }
     }
-
+*/
     @Override
     public void onDetach() {
         super.onDetach();
